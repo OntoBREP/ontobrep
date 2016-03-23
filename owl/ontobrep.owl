@@ -1,0 +1,2338 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://kb.local/rest/kb/ontobrep.owl#"
+     xml:base="http://kb.local/rest/kb/ontobrep.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://kb.local/rest/kb/ontobrep.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#adjacentEdge -->
+
+    <owl:ObjectProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#adjacentEdge">
+        <rdfs:subPropertyOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#adjacentElement"/>
+        <rdfs:range rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Edge"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#adjacentElement -->
+
+    <owl:ObjectProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#adjacentElement"/>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#approximatedBy -->
+
+    <owl:ObjectProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#approximatedBy"/>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#axis -->
+
+    <owl:ObjectProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#axis"/>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#axisRevolution -->
+
+    <owl:ObjectProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#axisRevolution">
+        <rdfs:subPropertyOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#axis"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#axisSymmetry -->
+
+    <owl:ObjectProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#axisSymmetry">
+        <rdfs:subPropertyOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#axis"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#baseCurve -->
+
+    <owl:ObjectProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#baseCurve">
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://kb.local/rest/kb/ontobrep.owl#Curve"/>
+                    <rdf:Description rdf:about="http://kb.local/rest/kb/ontobrep.owl#Curve2D"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#baseGeometry -->
+
+    <owl:ObjectProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#baseGeometry">
+        <rdfs:range rdf:resource="http://kb.local/rest/kb/ontobrep.owl#GeometricEntity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#baseSurface -->
+
+    <owl:ObjectProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#baseSurface">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Surface"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#boundedBy -->
+
+    <owl:ObjectProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#boundedBy">
+        <owl:inverseOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#bounds"/>
+        <rdfs:range rdf:resource="http://kb.local/rest/kb/ontobrep.owl#BREPTopologicalEntity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#bounds -->
+
+    <owl:ObjectProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#bounds">
+        <rdfs:domain rdf:resource="http://kb.local/rest/kb/ontobrep.owl#BREPTopologicalEntity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#constrainedGeometry -->
+
+    <owl:ObjectProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#constrainedGeometry">
+        <rdfs:range rdf:resource="http://kb.local/rest/kb/ontobrep.owl#GeometricEntity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#constrainedSpace -->
+
+    <owl:ObjectProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#constrainedSpace"/>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#containedBy -->
+
+    <owl:ObjectProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#containedBy">
+        <owl:inverseOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#contains"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#contains -->
+
+    <owl:ObjectProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#contains"/>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#controlPoint -->
+
+    <owl:ObjectProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#controlPoint">
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://kb.local/rest/kb/ontobrep.owl#ControlPoint"/>
+                    <rdf:Description rdf:about="http://kb.local/rest/kb/ontobrep.owl#ControlPoint2D"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#direction -->
+
+    <owl:ObjectProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#direction">
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://kb.local/rest/kb/ontobrep.owl#Vector"/>
+                    <rdf:Description rdf:about="http://kb.local/rest/kb/ontobrep.owl#Vector2D"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#directionExtrusion -->
+
+    <owl:ObjectProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#directionExtrusion">
+        <rdfs:subPropertyOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#direction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#directionMajor -->
+
+    <owl:ObjectProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#directionMajor">
+        <owl:equivalentProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#directionX"/>
+        <rdfs:subPropertyOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#direction"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#directionMinor -->
+
+    <owl:ObjectProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#directionMinor">
+        <owl:equivalentProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#directionY"/>
+        <rdfs:subPropertyOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#direction"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#directionNormal -->
+
+    <owl:ObjectProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#directionNormal">
+        <owl:equivalentProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#directionZ"/>
+        <rdfs:subPropertyOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#direction"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#directionOffset -->
+
+    <owl:ObjectProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#directionOffset">
+        <rdfs:subPropertyOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#direction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#directionX -->
+
+    <owl:ObjectProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#directionX">
+        <rdfs:subPropertyOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#direction"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#directionY -->
+
+    <owl:ObjectProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#directionY">
+        <rdfs:subPropertyOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#direction"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#directionZ -->
+
+    <owl:ObjectProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#directionZ">
+        <rdfs:subPropertyOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#direction"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#firstControlPoint -->
+
+    <owl:ObjectProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#firstControlPoint">
+        <rdfs:subPropertyOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#firstElement"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://kb.local/rest/kb/ontobrep.owl#ControlPoint"/>
+                    <rdf:Description rdf:about="http://kb.local/rest/kb/ontobrep.owl#ControlPoint2D"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#firstElement -->
+
+    <owl:ObjectProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#firstElement">
+        <rdfs:subPropertyOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#contains"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#firstKnot -->
+
+    <owl:ObjectProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#firstKnot">
+        <rdfs:subPropertyOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#firstElement"/>
+        <rdfs:range rdf:resource="http://kb.local/rest/kb/ontobrep.owl#BSplineKnot"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#knot -->
+
+    <owl:ObjectProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#knot"/>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#locatedAt -->
+
+    <owl:ObjectProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#locatedAt">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://kb.local/rest/kb/ontobrep.owl#BREPTopologicalEntity"/>
+        <rdfs:range rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Pose"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#nextElement -->
+
+    <owl:ObjectProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#nextElement">
+        <rdfs:subPropertyOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#adjacentElement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#nullSpace -->
+
+    <owl:ObjectProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#nullSpace"/>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#orientation -->
+
+    <owl:ObjectProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#orientation">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Pose"/>
+        <rdfs:range rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Orientation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#pcurve -->
+
+    <owl:ObjectProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#pcurve">
+        <rdfs:range rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Curve2D"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#position -->
+
+    <owl:ObjectProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#position">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#previousElement -->
+
+    <owl:ObjectProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#previousElement">
+        <rdfs:subPropertyOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#adjacentElement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#representedBy -->
+
+    <owl:ObjectProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#representedBy">
+        <owl:inverseOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#represents"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#represents -->
+
+    <owl:ObjectProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#represents"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#a11 -->
+
+    <owl:DatatypeProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#a11"/>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#a12 -->
+
+    <owl:DatatypeProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#a12"/>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#a13 -->
+
+    <owl:DatatypeProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#a13"/>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#a14 -->
+
+    <owl:DatatypeProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#a14">
+        <owl:equivalentProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#x"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#a21 -->
+
+    <owl:DatatypeProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#a21"/>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#a22 -->
+
+    <owl:DatatypeProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#a22"/>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#a23 -->
+
+    <owl:DatatypeProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#a23"/>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#a24 -->
+
+    <owl:DatatypeProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#a24">
+        <owl:equivalentProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#y"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#a31 -->
+
+    <owl:DatatypeProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#a31"/>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#a32 -->
+
+    <owl:DatatypeProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#a32"/>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#a33 -->
+
+    <owl:DatatypeProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#a33"/>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#a34 -->
+
+    <owl:DatatypeProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#a34">
+        <owl:equivalentProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#z"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#a41 -->
+
+    <owl:DatatypeProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#a41"/>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#a42 -->
+
+    <owl:DatatypeProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#a42"/>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#a43 -->
+
+    <owl:DatatypeProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#a43"/>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#a44 -->
+
+    <owl:DatatypeProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#a44"/>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#angleEuler -->
+
+    <owl:DatatypeProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#angleEuler"/>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#closed -->
+
+    <owl:DatatypeProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#closed">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#closedWire -->
+
+    <owl:DatatypeProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#closedWire">
+        <rdfs:subPropertyOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#closed"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Wire"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#coneHalfAngle -->
+
+    <owl:DatatypeProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#coneHalfAngle">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://kb.local/rest/kb/ontobrep.owl#ConicalSurface"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">φ ∈ (−π/2,π/2) / {0}</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#count -->
+
+    <owl:DatatypeProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#count"/>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#countControlPoints -->
+
+    <owl:DatatypeProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#countControlPoints">
+        <rdfs:subPropertyOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#count"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#countControlPointsU -->
+
+    <owl:DatatypeProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#countControlPointsU">
+        <rdfs:subPropertyOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#countControlPoints"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#countControlPointsV -->
+
+    <owl:DatatypeProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#countControlPointsV">
+        <rdfs:subPropertyOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#countControlPoints"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#countKnots -->
+
+    <owl:DatatypeProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#countKnots">
+        <rdfs:subPropertyOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#count"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#countKnotsU -->
+
+    <owl:DatatypeProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#countKnotsU">
+        <rdfs:subPropertyOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#countKnots"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#countKnotsV -->
+
+    <owl:DatatypeProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#countKnotsV">
+        <rdfs:subPropertyOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#countKnots"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#curveParamMax -->
+
+    <owl:DatatypeProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#curveParamMax"/>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#curveParamMin -->
+
+    <owl:DatatypeProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#curveParamMin"/>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#degenerated -->
+
+    <owl:DatatypeProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#degenerated">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#degree -->
+
+    <owl:DatatypeProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#degree">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#degreeU -->
+
+    <owl:DatatypeProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#degreeU">
+        <rdfs:subPropertyOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#degree"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#degreeV -->
+
+    <owl:DatatypeProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#degreeV">
+        <rdfs:subPropertyOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#degree"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#distanceEuclidean -->
+
+    <owl:DatatypeProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#distanceEuclidean">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#distanceFocal -->
+
+    <owl:DatatypeProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#distanceFocal">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#knotValue -->
+
+    <owl:DatatypeProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#knotValue"/>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#multiplicity -->
+
+    <owl:DatatypeProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#multiplicity">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#orientation -->
+
+    <owl:DatatypeProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#orientation">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#periodic -->
+
+    <owl:DatatypeProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#periodic">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#periodicU -->
+
+    <owl:DatatypeProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#periodicU">
+        <rdfs:subPropertyOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#periodic"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#periodicV -->
+
+    <owl:DatatypeProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#periodicV">
+        <rdfs:subPropertyOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#periodic"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#radius -->
+
+    <owl:DatatypeProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#radius">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#radiusMajor -->
+
+    <owl:DatatypeProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#radiusMajor">
+        <rdfs:subPropertyOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#radius"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#radiusMinor -->
+
+    <owl:DatatypeProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#radiusMinor">
+        <rdfs:subPropertyOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#radius"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#rational -->
+
+    <owl:DatatypeProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#rational">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#surfaceParamUmax -->
+
+    <owl:DatatypeProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#surfaceParamUmax">
+        <rdfs:domain rdf:resource="http://kb.local/rest/kb/ontobrep.owl#RectangularTrimmedSurface"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#surfaceParamUmin -->
+
+    <owl:DatatypeProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#surfaceParamUmin">
+        <rdfs:domain rdf:resource="http://kb.local/rest/kb/ontobrep.owl#RectangularTrimmedSurface"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#surfaceParamVmax -->
+
+    <owl:DatatypeProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#surfaceParamVmax">
+        <rdfs:domain rdf:resource="http://kb.local/rest/kb/ontobrep.owl#RectangularTrimmedSurface"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#surfaceParamVmin -->
+
+    <owl:DatatypeProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#surfaceParamVmin">
+        <rdfs:domain rdf:resource="http://kb.local/rest/kb/ontobrep.owl#RectangularTrimmedSurface"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#weight -->
+
+    <owl:DatatypeProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#weight"/>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#x -->
+
+    <owl:DatatypeProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#x">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Vector"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#y -->
+
+    <owl:DatatypeProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#y">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Vector"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#z -->
+
+    <owl:DatatypeProperty rdf:about="http://kb.local/rest/kb/ontobrep.owl#z">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Vector"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#AxisAngle -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#AxisAngle">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Orientation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#BREPTopologicalEntity -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#BREPTopologicalEntity">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#TopologicalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#BSplineCurve -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#BSplineCurve">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#BoundedCurve"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#firstControlPoint"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#ControlPoint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#firstKnot"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#BSplineKnot"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#degree"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#periodic"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#BSplineCurve2D -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#BSplineCurve2D">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#BoundedCurve2D"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#contains"/>
+                <owl:someValuesFrom rdf:resource="http://kb.local/rest/kb/ontobrep.owl#BSplineKnot"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#contains"/>
+                <owl:someValuesFrom rdf:resource="http://kb.local/rest/kb/ontobrep.owl#ControlPoint2D"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#degree"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#periodic"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#BSplineKnot -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#BSplineKnot">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Point1D"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#knotValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#multiplicity"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#BSplineSurface -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#BSplineSurface">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#BoundedSurface"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#BezierCurve -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#BezierCurve">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#BoundedCurve"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#firstControlPoint"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#ControlPoint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#BezierCurve2D -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#BezierCurve2D">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#BoundedCurve2D"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#contains"/>
+                <owl:someValuesFrom rdf:resource="http://kb.local/rest/kb/ontobrep.owl#ControlPoint2D"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#BezierSurface -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#BezierSurface">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#BoundedSurface"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#BisectorAna -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#BisectorAna">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#BisectorCurve2D"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#BisectorCC -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#BisectorCC">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#BisectorCurve2D"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#BisectorCurve2D -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#BisectorCurve2D">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Curve2D"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#BisectorPC -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#BisectorPC">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#BisectorCurve2D"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#BoundedCurve -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#BoundedCurve">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Curve"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#BoundedCurve2D -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#BoundedCurve2D">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Curve2D"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#BoundedSurface -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#BoundedSurface">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Surface"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#Circle -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#Circle">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#BoundedCurve"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#directionX"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Vector"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#directionY"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Vector"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#directionZ"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Vector"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#position"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Position"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#radius"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#Circle2D -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#Circle2D">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#BoundedCurve2D"/>
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#ConicCurve2D"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#directionX"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Vector2D"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#directionY"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Vector2D"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#position"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Position2D"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#radius"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#CompSolid -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#CompSolid">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#BREPTopologicalEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#contains"/>
+                <owl:someValuesFrom rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Solid"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#Compound -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#Compound">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#BREPTopologicalEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#contains"/>
+                <owl:someValuesFrom rdf:resource="http://kb.local/rest/kb/ontobrep.owl#BREPTopologicalEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#ConicCurve2D -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#ConicCurve2D">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Curve2D"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#ConicalSurface -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#ConicalSurface">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#UnboundedSurface"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#directionX"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Vector"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#directionY"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Vector"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#directionZ"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Vector"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#position"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Position"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#coneHalfAngle"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#radius"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#ControlPoint -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#ControlPoint">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Point"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#weight"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#ControlPoint2D -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#ControlPoint2D">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Point2D"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#weight"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#CoordinateSystem2DEntity -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#CoordinateSystem2DEntity">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#CoordinateSystemEntity"/>
+        <owl:disjointWith rdf:resource="http://kb.local/rest/kb/ontobrep.owl#CoordinateSystem3DEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#CoordinateSystem3DEntity -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#CoordinateSystem3DEntity">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#CoordinateSystemEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#CoordinateSystemEntity -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#CoordinateSystemEntity"/>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#Curve -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#Curve">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#GeometricEntity3D"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#Curve2D -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#Curve2D">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#GeometricEntity2D"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#CylindricalSurface -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#CylindricalSurface">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#UnboundedSurface"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#directionX"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Vector"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#directionY"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Vector"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#directionZ"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Vector"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#position"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Position"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#radius"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#Edge -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#Edge">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#BREPTopologicalEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#boundedBy"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Vertex"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#representedBy"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Curve"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#Ellipse -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#Ellipse">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#BoundedCurve"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#directionMajor"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Vector"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#directionMinor"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Vector"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#directionNormal"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Vector"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#position"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Position"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#radiusMajor"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#radiusMinor"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#Ellipse2D -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#Ellipse2D">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#BoundedCurve2D"/>
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#ConicCurve2D"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#directionMajor"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Vector2D"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#directionMinor"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Vector2D"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#position"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Position2D"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#radiusMajor"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#radiusMinor"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#Face -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#Face">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#BREPTopologicalEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#boundedBy"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Wire"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#representedBy"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Surface"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#GeometricEntity -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#GeometricEntity"/>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#GeometricEntity1D -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#GeometricEntity1D">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#GeometricEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#GeometricEntity2D -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#GeometricEntity2D">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#GeometricEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#GeometricEntity3D -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#GeometricEntity3D">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#GeometricEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#Hyperbola -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#Hyperbola">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#UnboundedCurve"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#directionMajor"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Vector"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#directionMinor"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Vector"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#directionNormal"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Vector"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#position"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Position"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#radiusMajor"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#radiusMinor"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#Hyperbola2D -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#Hyperbola2D">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#ConicCurve2D"/>
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#UnboundedCurve2D"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#directionMajor"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Vector2D"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#directionMinor"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Vector2D"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#position"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Position2D"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#radiusMajor"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#radiusMinor"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#Line -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#Line">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#UnboundedCurve"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#direction"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Vector"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#position"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Position"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#Line2D -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#Line2D">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#UnboundedCurve2D"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#direction"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Vector2D"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#position"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Position2D"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#LinearExtrudedSurface -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#LinearExtrudedSurface">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#UnboundedSurface"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#baseCurve"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Curve"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#direction"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Vector"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#OffsetCurve -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#OffsetCurve">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Curve"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#baseCurve"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Curve"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#directionOffset"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Vector"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#distanceEuclidean"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#OffsetCurve2D -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#OffsetCurve2D">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Curve2D"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#baseCurve"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Curve2D"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#distanceEuclidean"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#OffsetSurface -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#OffsetSurface">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Surface"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#baseSurface"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Surface"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#distanceEuclidean"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#Orientation -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#Orientation">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#CoordinateSystem3DEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#Parabola -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#Parabola">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#UnboundedCurve"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#directionX"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Vector"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#directionY"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Vector"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#directionZ"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Vector"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#position"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Position"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#distanceFocal"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#Parabola2D -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#Parabola2D">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#ConicCurve2D"/>
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#UnboundedCurve2D"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#directionX"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Vector2D"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#directionY"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Vector2D"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#position"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Position2D"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#distanceFocal"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#Plane -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#Plane">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#UnboundedSurface"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#directionX"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Vector"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#directionY"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Vector"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#directionZ"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Vector"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#position"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Position"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#Point -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#Point">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#GeometricEntity3D"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#position"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Position"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#Point1D -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#Point1D">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#GeometricEntity1D"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#Point2D -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#Point2D">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#GeometricEntity2D"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#position"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Position2D"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#PolygonOnTriangulation -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#PolygonOnTriangulation">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Curve"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#Pose -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#Pose">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#CoordinateSystem3DEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#Position -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#Position">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Vector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#Position2D -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#Position2D">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Vector2D"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#Quaternion -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#Quaternion">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Orientation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#RectangularTrimmedSurface -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#RectangularTrimmedSurface">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#BoundedSurface"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#baseSurface"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Surface"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#surfaceParamUmax"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#surfaceParamUmin"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#surfaceParamVmax"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#surfaceParamVmin"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#RevolutionSurface -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#RevolutionSurface">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Surface"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#baseCurve"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Curve"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#direction"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Vector"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#position"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Position"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#RigidTransformationMatrix -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#RigidTransformationMatrix">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Pose"/>
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Position"/>
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#RotationalMatrix"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#RotationalMatrix -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#RotationalMatrix">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Orientation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#a11"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#a12"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#a13"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#a21"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#a22"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#a23"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#a31"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#a32"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#a33"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#Shell -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#Shell">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#BREPTopologicalEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#contains"/>
+                <owl:someValuesFrom rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Face"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#Solid -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#Solid">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#BREPTopologicalEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#boundedBy"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Shell"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#SphericalSurface -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#SphericalSurface">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#BoundedSurface"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#directionX"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Vector"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#directionY"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Vector"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#directionZ"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Vector"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#position"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Position"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#radius"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#Surface -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#Surface">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#GeometricEntity3D"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#TopologicalEntity -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#TopologicalEntity"/>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#ToroidalSurface -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#ToroidalSurface">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#BoundedSurface"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#directionMajor"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Vector"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#directionMinor"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Vector"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#directionNormal"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Vector"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#position"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Position"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#radiusMajor"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#radiusMinor"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#Triangulation -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#Triangulation">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Surface"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#TrimmedCurve -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#TrimmedCurve">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#BoundedCurve"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#baseCurve"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Curve"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#curveParamMax"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#curveParamMin"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#TrimmedCurve2D -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#TrimmedCurve2D">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#BoundedCurve2D"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#baseCurve"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Curve2D"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#curveParamMax"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#curveParamMin"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#UnboundedCurve -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#UnboundedCurve">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Curve"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#UnboundedCurve2D -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#UnboundedCurve2D">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Curve2D"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#UnboundedSurface -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#UnboundedSurface">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Surface"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#Vector -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#Vector">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#CoordinateSystem3DEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#x"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#y"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#z"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#Vector2D -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#Vector2D">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#CoordinateSystem2DEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#Vertex -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#Vertex">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#BREPTopologicalEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#representedBy"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Point"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.local/rest/kb/ontobrep.owl#Wire -->
+
+    <owl:Class rdf:about="http://kb.local/rest/kb/ontobrep.owl#Wire">
+        <rdfs:subClassOf rdf:resource="http://kb.local/rest/kb/ontobrep.owl#BREPTopologicalEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#contains"/>
+                <owl:someValuesFrom rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Edge"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.local/rest/kb/ontobrep.owl#firstElement"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://kb.local/rest/kb/ontobrep.owl#Edge"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.1.20160306-0033) https://github.com/owlcs/owlapi -->
+
